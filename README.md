@@ -7,4 +7,6 @@ _GitHub: <https://github.com/voutilad/udacity-project1/>_
 
 ## Usage
 Run:
-  python generate.py
+````
+python entertainment_center.py
+````
