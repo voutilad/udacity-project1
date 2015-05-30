@@ -1,9 +1,10 @@
 FSND Project 1 - Movie Trailer Website
 ====================================================================
 
-Author: Dave Voutila
+_Author: Dave Voutila <mailto:voutilad@gmail.com>_
 
-Usage
------
+_GitHub: <https://github.com/voutilad/udacity-project1/>_
+
+## Usage
 Run:
   python generate.py
