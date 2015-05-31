@@ -10,3 +10,6 @@ Run:
 ````
 python entertainment_center.py
 ````
+
+
+Borrowed from https://docs.python.org/2/library/urllib.html#examples

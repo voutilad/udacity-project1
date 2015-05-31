@@ -1,13 +1,66 @@
 #!/usr/bin/python
 import media
 import fresh_tomatoes
+import urllib, json
+
+imdb_url = 'http://www.omdbapi.com/?y=&plot=short&r=json&'
+trailer_addict_url = 'http://api.traileraddict.com/?imdb=1403865&count=4&width=680'
+default_trailer = 'https://www.youtube.com/watch?v=5uZr3JWYdy8'
+
+
+def build_url(movie_title):
+    """
+    Builds the OMDb API url <http://www.omdbapi.com> that looks up a title and returns JSON.
+    Args:
+        movie_title: string of a movie title to search for
+
+    Returns:
+        a url as a string representing a GETable OMDb title lookup
+    """
+    return imdb_url + urllib.urlencode({'t': movie_title})
+
+def get_imdb_movie(movie_url):
+    """
+    Fetches a title from OMDb using their public API.
+
+    Args:
+        movie_url: string url representing a particular movie search
+
+    Returns:
+        a python dict object with the OMDb metadata
+
+    """
+    res = urllib.urlopen(movie_url)
+    if res.getcode() == 200:
+        raw = res.read()
+        return json.loads(raw)
+    else:
+        print 'error getting url ' + url
+        return None
+
+
+
+favorites = [
+            ('mad max: fury road', 'https://www.youtube.com/watch?v=hEJnMQG9ev8'),
+            ('the final sacrifice', default_trailer),
+            ('surf nazis must die', default_trailer)
+        ]
 
 print 'Assembling movie data...'
-madmax = media.Movie('Mad Max: Fury Road', 'http://t0.gstatic.com/images?q=tbn:ANd9GcQuK41mExh1Qv3kbXoxohWYGlcstOQ6zEnnNdSI2BGIKywQwgRI', 'https://www.youtube.com/watch?v=hEJnMQG9ev8')
-madmax.rating('R')
-badger = media.Movie('ESPN 30 for 30: Slaying the Badger', 'http://ecx.images-amazon.com/images/I/71KjRpHIpbL._SX425_.jpg', 'https://www.youtube.com/watch?v=6H7w89aZHZo')
+movies = []
+for favorite in favorites:
+    print '\tFetching metadata for ' + favorite[0] + '...'
 
-movies = [madmax, badger]
+    title = favorite[0]
+    trailer = favorite[1]
+
+    imdb_movie = get_imdb_movie(build_url(title))
+    if imdb_movie is not None:
+        movies.append(media.Movie(
+                                    title=imdb_movie['Title'],
+                                    trailer_youtube_url=trailer,
+                                    poster_image_url=imdb_movie['Poster']))
+
 
 print 'Movies list built:\n' + str(movies)
 
