@@ -29,7 +29,16 @@ class Movie(object):
 
 
     def describe(self):
-        return 'This movie kicks ass.'
+        """
+        Returns a summary of key movie attributes as a string.
+        """
+        return 'This movie (' + self.title + ') kicks ass.'
+
+    def describe_html(self):
+        """
+        Returns an HTML formatted summary of key movie attributes as a string.
+        """
+        return 'This movie (' + self.title + ') kicks ass.'
 
     def __str__(self):
-        return str([self.title, self.poster_image_url, self.trailer_youtube_url])
+        return self.describe()
