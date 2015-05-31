@@ -17,11 +17,19 @@ class Movie(object):
         self.title = title
         self.poster_image_url = poster_image_url
 
+        if poster_image_url is None:
+            self.poster_image_url = 'Fox_movietone_2.jpg'
+        else:
+            self.poster_image_url = poster_image_url
+
         if trailer_youtube_url is None:
             self.trailer_youtube_url = 'https://www.youtube.com/watch?v=5uZr3JWYdy8'
         else:
             self.trailer_youtube_url = trailer_youtube_url
 
+
+    def describe(self):
+        return 'This movie kicks ass.'
 
     def __str__(self):
         return str([self.title, self.poster_image_url, self.trailer_youtube_url])
