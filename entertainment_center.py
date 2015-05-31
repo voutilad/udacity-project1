@@ -3,6 +3,9 @@ import media, omdb
 import fresh_tomatoes
 import urllib, json
 
+"""
+Builds the "entertainment center" representing the Fresh Tomatoes website.
+"""
 
 movies = []
 favorites = [
