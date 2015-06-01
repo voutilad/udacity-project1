@@ -4,8 +4,12 @@
 
 **Author**: Dave Voutila - voutilad\[at\]gmail.com
 
-This first project demonstrates some core concepts of utilizing Python classes, proper python styling per [Google's Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html?showone=Naming#Comments),
+This first project demonstrates some core concepts of utilizing Python classes, proper python styling per [Google's Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html?showone=Naming#Comments), and some tinkering with [Bootstrap](http://getbootstrap.com).
 
+## Requirements
+* Python 2.x - tested with 2.7.6
+* Live internet connectivity
+* Modern web browser
 
 ## Usage
 Simply run:
@@ -13,6 +17,7 @@ Simply run:
 python entertainment_center.py
 ````
 
+### Adding/Removing Movies
 To add movies, modify the _entertainment_center.py_  file by adding or removing tuples from the _FAVORITES_ list like so:
 
 `````python
@@ -40,13 +45,15 @@ The rest is taken care of by the OMDb client (_omdb.py_) for retrieving:
 * short plot summary
 * IMDB rating
 
-## References
+## Some References
 
 - [The Open Movie Database](http://www.omdbapi.com) to fetch metadata (specifically movie posters).
-
+- [Boostrap - Popovers](http://getbootstrap.com/javascript/#popovers)
 
 ## Copyright and Licenses
 
-For Python code, see LICENSE file.
+For _fresh_tomatoes.py_, it was provided by [Udacity](http://www.udacity.com) and is used with permission as part of the Full Stack Web Developer Nanodegree course.
 
-For 'Fox_movietone_2.jpg', it is provided in the public domain per https://commons.wikimedia.org/wiki/File:Fox_movietone_2.jpg
+For other Python code, see LICENSE file.
+
+For _Fox_movietone_2.jpg_ (the placeholder poster graphic), it is provided in the public domain per https://commons.wikimedia.org/wiki/File:Fox_movietone_2.jpg
