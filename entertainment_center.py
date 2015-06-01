@@ -42,8 +42,5 @@ for favorite in FAVORITES:
             popularity=imdb_movie['imdbRating'])
         MOVIES.append(movie)
 
-
-print 'Movies list built:\n' + str(MOVIES)
-
-print 'Generating movies page and launching browser...'
+print 'Generating movies page and launching your browser...'
 fresh_tomatoes.open_movies_page(MOVIES)

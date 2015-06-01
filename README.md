@@ -13,6 +13,33 @@ Simply run:
 python entertainment_center.py
 ````
 
+To add movies, modify the _entertainment_center.py_  file by adding or removing tuples from the _FAVORITES_ list like so:
+
+`````python
+FAVORITES = [
+    ('mad max: fury road', 'https://www.youtube.com/watch?v=hEJnMQG9ev8'),
+    ('the final sacrifice', None),
+    ('surf nazis must die', 'https://www.youtube.com/watch?v=Q8LV1S2q2GA'),
+    ('breaking away', 'https://www.youtube.com/watch?v=J1jzs6dk4bs'),
+    ('tron', 'https://www.youtube.com/watch?v=L9szn1QQfas'),
+    ('ski patrol', 'https://www.youtube.com/watch?v=OTyp09bkZbk')
+]
+`````
+
+Each tuple follows the format:
+`````
+(title, youtube_url)
+`````
+At minimum, a title must be provided. For titles without known trailers, the _youtube_url_ value can be _None_.
+
+The rest is taken care of by the OMDb client (_omdb.py_) for retrieving:
+* movie poster url
+* MPAA rating
+* movie runtime
+* year of release
+* short plot summary
+* IMDB rating
+
 ## References
 
 - [The Open Movie Database](http://www.omdbapi.com) to fetch metadata (specifically movie posters).
