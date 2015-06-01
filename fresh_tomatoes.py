@@ -77,7 +77,7 @@ main_page_head = '''
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
           });
-          $('.movie-tile').popover({trigger: 'hover'});
+          $('.movie-tile').popover({trigger: 'hover', html: true});
         });
     </script>
 </head>
@@ -140,7 +140,7 @@ def create_movie_tiles_content(movies):
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
-            description=movie.describe()
+            description=movie.describe_html()
         )
     return content
 
