@@ -13,7 +13,9 @@ FAVORITES = [
     ('mad max: fury road', 'https://www.youtube.com/watch?v=hEJnMQG9ev8'),
     ('the final sacrifice', None),
     ('surf nazis must die', 'https://www.youtube.com/watch?v=Q8LV1S2q2GA'),
-    ('bananaland', 'https://www.youtube.com/watch?v=8tch4JJKcMA')
+    ('breaking away', 'https://www.youtube.com/watch?v=J1jzs6dk4bs'),
+    ('tron', 'https://www.youtube.com/watch?v=L9szn1QQfas'),
+    ('ski patrol', 'https://www.youtube.com/watch?v=OTyp09bkZbk')
 ]
 
 print 'Assembling movie data...'

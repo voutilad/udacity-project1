@@ -77,7 +77,7 @@ main_page_head = '''
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
           });
-          $('.movie-tile').popover({trigger: 'hover', html: true});
+          $('.movie-tile').popover({trigger: 'hover', html: true, placement: 'auto right'});
         });
     </script>
 </head>

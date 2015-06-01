@@ -78,10 +78,10 @@ class Movie(object):
 
         if self.attributes.has_key('popularity'):
             description = description + '<b>IMDB Rating:</b> '
-            description = description + str(self.attributes['popularity']) + ' out of 10'
+            description = description + str(self.attributes['popularity']) + ' out of 10<br>'
 
         if self.attributes.has_key('plot_summary'):
-            description = description + '<hr><i>' + self.attributes['plot_summary'] + "</i><br>"
+            description = description + '<i>' + self.attributes['plot_summary'] + "</i><br>"
 
         return description
 
